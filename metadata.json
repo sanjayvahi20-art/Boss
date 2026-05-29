@@ -1,0 +1,6 @@
+{
+  "name": "Udan Exam League",
+  "description": "Play Exam Leagues, compete in live mock contests, check leaderboards, manage wallet balance, and track profile achievements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

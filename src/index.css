@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Custom theme colors to prevent white or unrendered colors on buttons and texts */
+  --color-red-150: #fecdd3;
+  --color-red-550: #f43f5e;
+  --color-red-650: #ff1c45;
+  --color-red-750: #be123c;
+  --color-rose-650: #be123c;
+  --color-green-550: #10b981;
+  --color-green-650: #059669;
+  --color-emerald-650: #059669;
+  --color-indigo-650: #4f46e5;
+  --color-yellow-450: #facc15;
+  --color-yellow-550: #eab308;
+  --color-yellow-650: #ca8a04;
+  --color-slate-150: #f1f5f9;
+  --color-slate-250: #e2e8f0;
+  --color-slate-550: #64748b;
+  --color-slate-655: #475569;
+  --color-slate-650: #475569;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f3f4f6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom Scrollbar */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes ticker {
+  0% { transform: translate3d(100%, 0, 0); }
+  100% { transform: translate3d(-100%, 0, 0); }
+}
+
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-item {
+  display: inline-block;
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-item:hover {
+  animation-play-state: paused;
+}
